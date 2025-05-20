@@ -1,0 +1,87 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Rezervimet</mat-card-title>
+    <mat-card-subtitle class="red-text">Lista e rezervimeve</mat-card-subtitle>
+    <div class="example-spacer" style="flex: 1 1 auto"></div>
+    <button mat-icon-button>
+      <i-tabler class="routeIcon" name="plus" matListItemIcon></i-tabler>
+    </button>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <div class="table-responsive m-t-16">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let user">{{ user.id }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="userName">
+          <th mat-header-cell *matHeaderCellDef>Emri</th>
+          <td mat-cell *matCellDef="let user">{{ user.userName }}</td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="sport">
+          <th mat-header-cell *matHeaderCellDef>Sport</th>
+          <td mat-cell *matCellDef="let user">{{ user.sport }}</td>
+        </ng-container>
+
+        <!-- Role Column -->
+        <ng-container matColumnDef="phoneNumber">
+          <th mat-header-cell *matHeaderCellDef>Telefoni</th>
+          <td mat-cell *matCellDef="let user">{{ user.phoneNumber }}</td>
+        </ng-container>
+
+        <!-- Role Column -->
+        <ng-container matColumnDef="facility">
+          <th mat-header-cell *matHeaderCellDef>Fusha</th>
+          <td mat-cell *matCellDef="let user">{{ user.facility }}</td>
+        </ng-container>
+
+        <!-- Role Column -->
+        <ng-container matColumnDef="reservationDate">
+          <th mat-header-cell *matHeaderCellDef>Data</th>
+          <td mat-cell *matCellDef="let user">{{ user.reservationDate }}</td>
+        </ng-container>
+
+        <!-- Role Column -->
+        <ng-container matColumnDef="city">
+          <th mat-header-cell *matHeaderCellDef>Qyteti</th>
+          <td mat-cell *matCellDef="let user">{{ user.city }}</td>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let user">
+            <button mat-icon-button>
+              <i-tabler
+                class="routeIcon"
+                name="pencil"
+                matListItemIcon
+              ></i-tabler>
+            </button>
+            <button mat-icon-button>
+              <i-tabler
+                class="routeIcon"
+                name="trash"
+                matListItemIcon
+              ></i-tabler>
+            </button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic elements"
+      >
+      </mat-paginator>
+    </div>
+  </mat-card-content>
+</mat-card>

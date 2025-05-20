@@ -1,0 +1,598 @@
+<mat-sidenav-container class="mat-drawer-container mat-sidenav-container">
+  <mat-sidenav-content class="mat-drawer-content mat-sidenav-content">
+    <mat-toolbar
+      class="mat-toolbar topbar topbar-xl m-auto mat-toolbar-single-row"
+    >
+      <div class="container full-width p-xs-6">
+        <div class="branding p-x-0">
+          <a href="/" class="ng-star-inserted"
+            ><img
+              src="./assets/images/logos/LogoPNG.PNG"
+              alt="logo"
+              class="align-middle m-2"
+              style="width: 35%" /></a
+          ><!----><!---->
+        </div>
+        <span class="flex-1-auto"></span>
+        <div class="d-none d-lg-flex">
+          <button
+            mat-button=""
+            class="m-x-8 f-s-16 f-w-500 mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base"
+            mat-ripple-loader-uninitialized=""
+            mat-ripple-loader-class-name="mat-mdc-button-ripple"
+          >
+            <span
+              class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+            ></span>
+            <span class="mdc-button__label"> Për ne </span>
+            <span class="mat-mdc-focus-indicator"></span>
+            <span class="mat-mdc-button-touch-target"></span>
+          </button>
+          <!-- <button
+            mat-button=""
+            aria-label="Notifications"
+            class="mat-mdc-menu-trigger m-x-8 f-s-16 f-w-500 mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base"
+            mat-ripple-loader-class-name="mat-mdc-button-ripple"
+            aria-haspopup="menu"
+            aria-expanded="false"
+          >
+            <span class="mat-mdc-button-persistent-ripple mdc-button__ripple">
+            </span
+            ><span class="mdc-button__label"
+              ><div class="d-flex align-items-center">
+                Pages
+                <i-tabler
+                  name="chevron-down"
+                  class="icon-16 m-l-4"
+                  _nghost-ng-c2605515766=""
+                  ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </i-tabler></div></span
+            ><span class="mat-mdc-focus-indicator"></span
+            ><span class="mat-mdc-button-touch-target"></span
+            ><span class="mat-ripple mat-mdc-button-ripple"></span></button
+          ><mat-menu
+            ngskiphydration=""
+            xposition="before"
+            class="ng-star-inserted"
+            ></mat-menu
+          >
+          -->
+          <!-- <a
+            mat-button=""
+            href="https://demos.adminmart.com/premium/angular/modernize-angular/docs/index.html"
+            class="m-x-8 f-s-16 f-w-500 mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base"
+            mat-ripple-loader-class-name="mat-mdc-button-ripple"
+            aria-disabled="false"
+            ><span
+              class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+            ></span
+            ><span class="mdc-button__label">Documentation</span
+            ><span class="mat-mdc-focus-indicator"></span
+            ><span class="mat-mdc-button-touch-target"></span
+            ><span class="mat-ripple mat-mdc-button-ripple"></span></a
+          ><a
+            mat-button=""
+            href="https://adminmart.com/support"
+            class="m-x-8 f-s-16 f-w-500 mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base"
+            mat-ripple-loader-class-name="mat-mdc-button-ripple"
+            aria-disabled="false"
+            ><span
+              class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+            ></span
+            ><span class="mdc-button__label">Support</span
+            ><span class="mat-mdc-focus-indicator"></span
+            ><span class="mat-mdc-button-touch-target"></span
+            ><span class="mat-ripple mat-mdc-button-ripple"></span
+          ></a> -->
+          <a
+            [routerLink]="['/authentication/login']"
+            mat-flat-button=""
+            color="primary"
+            class="m-l-10 mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"
+            mat-ripple-loader-class-name="mat-mdc-button-ripple"
+            aria-disabled="false"
+            ><span
+              class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+            ></span
+            ><span class="mdc-button__label">Kyqu</span
+            ><span class="mat-mdc-focus-indicator"></span
+            ><span class="mat-mdc-button-touch-target"></span
+            ><span class="mat-ripple mat-mdc-button-ripple"></span
+          ></a>
+          <a
+            mat-flat-button=""
+            color="primary"
+            class="m-l-10 mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"
+            mat-ripple-loader-class-name="mat-mdc-button-ripple"
+            [routerLink]="['/authentication/register']"
+            aria-disabled="false"
+            ><span
+              class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+            ></span
+            ><span class="mdc-button__label">Regjistrohu</span
+            ><span class="mat-mdc-focus-indicator"></span
+            ><span class="mat-mdc-button-touch-target"></span
+            ><span class="mat-ripple mat-mdc-button-ripple"></span
+          ></a>
+        </div>
+        <button
+          mat-icon-button=""
+          class="d-flex d-lg-none mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base"
+          mat-ripple-loader-uninitialized=""
+          mat-ripple-loader-class-name="mat-mdc-button-ripple"
+          mat-ripple-loader-centered=""
+        >
+          <span
+            class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"
+          ></span
+          ><i-tabler
+            name="menu-2"
+            class="icon-20 d-flex"
+            _nghost-ng-c2605515766=""
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M4 6l16 0"></path>
+              <path d="M4 12l16 0"></path>
+              <path d="M4 18l16 0"></path>
+            </svg> </i-tabler
+          ><span class="mat-mdc-focus-indicator"></span
+          ><span class="mat-mdc-button-touch-target"></span>
+        </button></div
+    ></mat-toolbar>
+    <div class="overflow-hidden banner-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-flex align-items-center">
+            <div>
+              <span class="f-s-16 f-w-600 m-b-16 d-flex align-items-center">
+                <i-tabler
+                  name="rocket"
+                  class="green-rocket m-r-8"
+                  _nghost-ng-c2605515766=""
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"
+                    ></path>
+                    <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
+                    <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                  </svg>
+                </i-tabler>
+                Gjejë & Rezervo fushën sportive më shpejt</span
+              >
+              <h1 class="banner-title m-0">
+                <span class="text-primary">Fusha sportive </span>
+              </h1>
+              <p class="f-s-18 p-y-24 m-t-12 m-0 banner-subtitle">
+                Platforma e vetme në vendin tonë e cila të mundëson rezervimin e
+                fushave sportive online dhe më shpejt
+              </p>
+              <div class="m-t-24 hstack">
+                <a
+                  mat-flat-button=""
+                  color="primary"
+                  class="btn-custom mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"
+                  mat-ripple-loader-class-name="mat-mdc-button-ripple"
+                  [routerLink]="['/authentication/login']"
+                  aria-disabled="false"
+                >
+                  <span
+                    class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+                  ></span
+                  ><span class="mdc-button__label">Kyqu</span
+                  ><span class="mat-mdc-focus-indicator"></span
+                  ><span class="mat-mdc-button-touch-target"></span
+                  ><span class="mat-ripple mat-mdc-button-ripple"></span></a
+                ><a
+                  mat-stroked-button=""
+                  color="primary"
+                  class="btn-custom border-primary mdc-button mdc-button--outlined mat-mdc-outlined-button mat-primary mat-mdc-button-base"
+                  mat-ripple-loader-class-name="mat-mdc-button-ripple"
+                  aria-disabled="false"
+                  [routerLink]="['/authentication/register']"
+                  ><span
+                    class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+                  ></span
+                  ><span class="mdc-button__label">Regjistrohu</span
+                  ><span class="mat-mdc-focus-indicator"></span
+                  ><span class="mat-mdc-button-touch-target"></span
+                  ><span class="mat-ripple mat-mdc-button-ripple"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-none d-lg-flex">
+            <div class="p-24 banner-slider">
+              <div class="col-lg-6">
+                <img
+                  src="./assets/images/home-fields/football.jpg"
+                  alt="img1"
+                  width="40%"
+                />
+              </div>
+              <div class="col-lg-6">
+                <img
+                  src="./assets/images/home-fields/basketball.jpg"
+                  alt="img1"
+                  width="40%"
+                />
+              </div>
+              <div class="col-lg-6">
+                <img
+                  src="./assets/images/home-fields/football.jpg"
+                  alt="img1"
+                  width="40%"
+                />
+              </div>
+              <div class="col-lg-6">
+                <img
+                  src="./assets/images/home-fields/basketball.jpg"
+                  alt="img1"
+                  width="40%"
+                />
+              </div>
+              <!-- <div class="d-flex">
+                <div>
+                  <div class="">
+                    <img
+                      src="./assets/images/home-fields/football.jpg"
+                      alt="img1"
+                      width="40%"
+                    />
+                  </div>
+                  <div class="">
+                    <img
+                      src="./assets/images/home-fields/basketball.jpg"
+                      alt="img1"
+                      width="40%"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div class="">
+                    <img
+                      src="./assets/images/home-fields/basketball.jpg"
+                      alt="img1"
+                      width="30%"
+                    />
+                  </div>
+                  <div class="">
+                    <img
+                      src="./assets/images/home-fields/basketball.jpg"
+                      alt="img1"
+                      width="20%"
+                    />
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-extra-light spacer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <mat-card class="mat-mdc-card mdc-card cardWithShadow theme-card">
+            <mat-card-header class="mat-mdc-card-header">
+              <div class="mat-mdc-card-header-text">
+                <mat-card-title class="mat-mdc-card-title m-b-0"
+                  >Kërko fushën sportive</mat-card-title
+                >
+              </div>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="row">
+                <div class="col-lg-3">
+                  <mat-label
+                    class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+                    >Sporti</mat-label
+                  >
+                  <mat-form-field
+                    appearance="outline"
+                    class="w-100"
+                    color="primary"
+                  >
+                    <mat-select>
+                      <mat-option value="one">Futboll</mat-option>
+                      <mat-option value="two">Basketboll</mat-option>
+                      <mat-option value="two">Tenis</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-lg-3">
+                  <mat-label
+                    class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+                    >Qyteti</mat-label
+                  >
+                  <mat-form-field
+                    appearance="outline"
+                    class="w-100"
+                    color="primary"
+                  >
+                    <mat-select>
+                      <mat-option value="one">Prishtinë</mat-option>
+                      <mat-option value="two">Pejë</mat-option>
+                      <mat-option value="two">Mitrovicë</mat-option>
+                      <mat-option value="two">Prizren</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-lg-3">
+                  <mat-label
+                    class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+                    >Data</mat-label
+                  >
+                  <mat-form-field
+                    appearance="outline"
+                    class="w-100"
+                    color="primary"
+                  >
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" />
+                    <mat-datepicker-toggle
+                      matIconSuffix
+                      [for]="picker"
+                    ></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div class="col-lg-3">
+                  <mat-label> &nbsp; </mat-label>
+                  <a
+                    mat-flat-button=""
+                    color="primary"
+                    class="btn-custom mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"
+                    mat-ripple-loader-class-name="mat-mdc-button-ripple"
+                    href="/authentication/side-login"
+                    aria-disabled="false"
+                    style="margin-top: 12%"
+                  >
+                    <span
+                      class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+                    ></span
+                    ><span class="mdc-button__label">Kërko</span
+                    ><span class="mat-mdc-focus-indicator"></span
+                    ><span class="mat-mdc-button-touch-target"></span
+                    ><span class="mat-ripple mat-mdc-button-ripple"></span
+                  ></a>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="spacer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-sm-8">
+            <span
+              class="text-primary text-uppercase d-block text-center f-w-500"
+              >REZERVO & MENAXHO ME LEHTESI</span
+            >
+            <h2 class="section-title text-center m-t-16">
+              Shërbimet që ofrohen
+            </h2>
+          </div>
+        </div>
+        <div class="row m-t-24">
+          <div class="col-sm-4 col-lg-3 text-center ng-star-inserted">
+            <i-tabler
+              class="icon-40 text-primary m-t-16"
+              _nghost-ng-c2605515766=""
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                <path d="M21 21l-6 -6" />
+              </svg>
+            </i-tabler>
+            <h6 class="m-0 f-s-18 f-w-600 m-b-8 m-t-24">Kërko dhe Rezervo</h6>
+            <span class="f-s-14 m-b-24 d-block lh-base"
+              >Mundësi më e lehtë për të kërkuar dhe rezervuar fushën
+              sportive</span
+            >
+          </div>
+          <div class="col-sm-4 col-lg-3 text-center ng-star-inserted">
+            <i-tabler
+              class="icon-40 text-primary m-t-16"
+              _nghost-ng-c2605515766=""
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M13 5h8" />
+                <path d="M13 9h5" />
+                <path d="M13 15h8" />
+                <path d="M13 19h5" />
+                <path
+                  d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+                />
+                <path
+                  d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+                />
+              </svg>
+            </i-tabler>
+            <h6 class="m-0 f-s-18 f-w-600 m-b-8 m-t-24">
+              Menaxhim të rezervimeve
+            </h6>
+            <span class="f-s-14 m-b-24 d-block lh-base"
+              >Përmes aplikacionit tonë mund të menaxhoni rezervimet në fushën
+              sportive tuaj.</span
+            >
+          </div>
+          <div class="col-sm-4 col-lg-3 text-center ng-star-inserted">
+            <i-tabler
+              class="icon-40 text-primary m-t-16"
+              _nghost-ng-c2605515766=""
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"
+                ></path>
+                <path d="M16 3v4"></path>
+                <path d="M8 3v4"></path>
+                <path d="M4 11h16"></path>
+                <path d="M11 15h1"></path>
+                <path d="M12 15v3"></path>
+              </svg>
+            </i-tabler>
+            <h6 class="m-0 f-s-18 f-w-600 m-b-8 m-t-24">
+              Kalendari i rezervimeve
+            </h6>
+            <span class="f-s-14 m-b-24 d-block lh-base"
+              >Kalendari i rezervimeve, mundesi e mire per menaxhim të
+              rezervimeve nga pronarët e fushave.</span
+            >
+          </div>
+          <div class="col-sm-4 col-lg-3 text-center ng-star-inserted">
+            <i-tabler
+              class="icon-40 text-primary m-t-16"
+              _nghost-ng-c2605515766=""
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path>
+                <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
+              </svg>
+            </i-tabler>
+            <h6 class="m-0 f-s-18 f-w-600 m-b-8 m-t-24">Abonim</h6>
+            <span class="f-s-14 m-b-24 d-block lh-base"
+              >Nëse doni të abononi fushën për periudha më të gjata, atëherë
+              sistemi ju lejon që ta bëni këtë.</span
+            >
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="container spacer-bottom">
+      <div class="row justify-content-center">
+        <div class="col-sm-10 col-lg-6">
+          <mat-card
+            class="mat-mdc-card mdc-card cardWithShadow shape-card bg-size-cover"
+            style="
+              background-image: url('/assets/images/landingpage/shape/line-bg.svg');
+            "
+            ><mat-card-content class="mat-mdc-card-content p-32 text-center"
+              ><h3 class="f-s-24 f-w-600 m-0 m-t-12 mat-subtitle-1">
+                Dëshironi të na kontaktoni për më shume informacione?
+              </h3>
+              <span class="f-s-14 f-w-500 m-t-8 d-block"
+                >Na kontaktoni duke klikuar butonin e mëposhtëm dhe duke
+                plotësuar formën</span
+              >
+              <div class="m-t-30 m-b-16 hstack justify-content-center">
+                <a
+                  mat-stroked-button=""
+                  color="primary"
+                  class="btn-custom border-primary mdc-button mdc-button--outlined mat-mdc-outlined-button mat-primary mat-mdc-button-base"
+                  mat-ripple-loader-class-name="mat-mdc-button-ripple"
+                  aria-disabled="false"
+                  ><span
+                    class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+                  ></span
+                  ><span class="mdc-button__label">Kontakto</span
+                  ><span class="mat-mdc-focus-indicator"></span
+                  ><span class="mat-mdc-button-touch-target"></span
+                  ><span class="mat-ripple mat-mdc-button-ripple"></span
+                ></a></div></mat-card-content
+          ></mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary spacer-sm">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-5">
+            <h3 class="m-t-0 section-title2 text-white m-b-24">
+              Regjistrohuni dhe bëni rezervimin e fushës sipas orarit që të
+              përshtatet
+            </h3>
+            <div class="hstack">
+              <a
+                mat-stroked-button=""
+                color="white"
+                class="btn-custom sm text-white f-w-500 border-white mdc-button mdc-button--outlined mat-mdc-outlined-button mat-white mat-mdc-button-base"
+                mat-ripple-loader-uninitialized=""
+                mat-ripple-loader-class-name="mat-mdc-button-ripple"
+                aria-disabled="false"
+                [routerLink]="['/authentication/register']"
+                ><span
+                  class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+                ></span
+                ><span class="mdc-button__label">Regjistrohu</span
+                ><span class="mat-mdc-focus-indicator"></span
+                ><span class="mat-mdc-button-touch-target"></span
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-5 text-right">
+            <img
+              src="assets/images/home-fields/lo2.svg"
+              alt="img"
+              width="330"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <mat-card
+        class="mat-mdc-card mdc-card cardWithShadow c2a-card bg-size-cover"
+        style="
+          background-image: url('/assets/images/landingpage/shape/line-bg-2.svg');
+        "
+        ><mat-card-content class="mat-mdc-card-content p-24"
+          ><div class="hstack justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="assets/images/backgrounds/register.png" alt="badge" />
+              <div class="m-l-24">
+                <h5 class="f-s-21 f-w-600 mat-subtitle-1 m-b-4">
+                  Regjistrohu si biznes dhe përfito nga platforma jonë
+                </h5>
+                <span class="f-s-14"
+                  >Shfaq fushën tuaj sportive në listën e kërkimit dhe përfito
+                  nga ofertat tona.</span
+                >
+              </div>
+            </div>
+            <a
+              mat-flat-button=""
+              color="primary"
+              class="btn-custom mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"
+              mat-ripple-loader-uninitialized=""
+              mat-ripple-loader-class-name="mat-mdc-button-ripple"
+              [routerLink]="['/authentication/register']"
+              aria-disabled="false"
+              ><span
+                class="mat-mdc-button-persistent-ripple mdc-button__ripple"
+              ></span
+              ><span class="mdc-button__label">Regjistrohu</span
+              ><span class="mat-mdc-focus-indicator"></span
+              ><span class="mat-mdc-button-touch-target"></span
+            ></a></div></mat-card-content
+      ></mat-card>
+    </div>
+    <footer class="p-y-30">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-5 col-lg-4 text-center">
+            <span
+              ><img
+                src="assets/images/logos/LogoFS.png"
+                alt="logo"
+                style="height: 40%"
+            /></span>
+            <div class="f-s-14 m-t-8">
+              Të gjitha të drejtat e rezervuara nga
+              <a class="mat-subtitle-2">fushasporti.com</a> Fusha Sporti &copy;
+              2024
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

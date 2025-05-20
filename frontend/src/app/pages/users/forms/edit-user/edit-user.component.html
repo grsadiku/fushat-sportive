@@ -1,0 +1,125 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Përdoruesit</mat-card-title>
+    <mat-card-subtitle class="red-text">Krijo përdorues</mat-card-subtitle>
+    <div class="example-spacer" style="flex: 1 1 auto"></div>
+    <button mat-icon-button [routerLink]="'/users'">
+      <i-tabler class="routeIcon" name="arrow-left" matListItemIcon></i-tabler>
+    </button>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <form [formGroup]="userForm">
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Emri</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput formControlName="FirstName" />
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Mbiemri</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput formControlName="LastName" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Qyteti</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <mat-select formControlName="IDCity">
+              <mat-option value="1">Prishtinë</mat-option>
+              <mat-option value="4">Pejë</mat-option>
+              <mat-option value="7">Mitrovicë</mat-option>
+              <mat-option value="2">Prizren</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Data e lindjes</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <!-- <mat-label>Zgjidh datën</mat-label> -->
+            <input
+              matInput
+              [matDatepicker]="picker"
+              formControlName="Birthdate"
+            />
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Email</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput formControlName="Email" />
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Fjalëkalimi</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput type="password" formControlName="Password" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Roli</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <mat-select formControlName="IDRole">
+              <mat-option value="1">Admin</mat-option>
+              <mat-option value="2">Biznes</mat-option>
+              <mat-option value="3">User</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Telefoni</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput formControlName="PhoneNumber" />
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      [routerLink]="'/users'"
+      type="button"
+      mat-flat-button
+      color="warn"
+      mat-ripple-loader-class-name="mat-mdc-button-ripple"
+    >
+      Anulo
+    </button>
+    <button
+      (click)="editUser()"
+      mat-flat-button
+      color="primary"
+      class="m-l-8"
+      mat-ripple-loader-class-name="mat-mdc-button-ripple"
+    >
+      Ruaj
+    </button>
+  </mat-card-actions>
+</mat-card>
