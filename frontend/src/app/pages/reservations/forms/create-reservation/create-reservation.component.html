@@ -1,0 +1,111 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Rezervimet</mat-card-title>
+    <mat-card-subtitle class="red-text">Krijo rezervim</mat-card-subtitle>
+    <div class="example-spacer" style="flex: 1 1 auto"></div>
+    <button mat-icon-button [routerLink]="'/reservations'">
+      <i-tabler class="routeIcon" name="arrow-left" matListItemIcon></i-tabler>
+    </button>
+  </mat-card-header>
+
+  <mat-card-content class="b-t-1">
+    <form [formGroup]="reservationForm">
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Titulli</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput formControlName="Title" />
+          </mat-form-field>
+        </div>
+
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Faciliteti</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <mat-select formControlName="IDFacility">
+              <mat-option
+                *ngFor="let facility of facilities"
+                [value]="facility.id"
+                >{{ facility.title }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Data e fillimit</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input
+              matInput
+              [matDatepicker]="startPicker"
+              formControlName="ReservationDate"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="startPicker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #startPicker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Data e mbarimit</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input
+              matInput
+              [matDatepicker]="endPicker"
+              formControlName="ReservationEndDate"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="endPicker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #endPicker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Përsëritje</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <mat-select formControlName="IsRecurring">
+              <mat-option [value]="false">Jo</mat-option>
+              <mat-option [value]="true">Po</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button
+      [routerLink]="'/reservations'"
+      type="button"
+      mat-flat-button
+      color="warn"
+    >
+      Anulo
+    </button>
+    <button
+      (click)="saveReservation()"
+      mat-flat-button
+      color="primary"
+      class="m-l-8"
+    >
+      Ruaj
+    </button>
+  </mat-card-actions>
+</mat-card>

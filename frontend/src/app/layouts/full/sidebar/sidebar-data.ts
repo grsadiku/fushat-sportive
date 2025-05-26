@@ -25,7 +25,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Rezervimet',
     iconName: 'calendar-stats',
-    route: '/reservations/reservations',
+    route: '/reservations',
   },
   {
     displayName: 'Raportet',
