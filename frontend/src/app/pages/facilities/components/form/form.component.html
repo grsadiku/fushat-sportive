@@ -1,0 +1,124 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Fushat</mat-card-title>
+    <mat-card-subtitle class="red-text">Krijo fushë</mat-card-subtitle>
+    <div class="example-spacer" style="flex: 1 1 auto"></div>
+    <button mat-icon-button [routerLink]="'/users'">
+      <i-tabler class="routeIcon" name="arrow-left" matListItemIcon></i-tabler>
+    </button>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <form [formGroup]="facilityForm">
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Titulli</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput formControlName="title" />
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Lokacioni</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput formControlName="location" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Pershkrimi</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput formControlName="description" />
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Aktiv?</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput formControlName="isActive" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Sporti</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <mat-select formControlName="sportId">
+              <mat-option value="1">Futboll</mat-option>
+              <mat-option value="2">Basketboll</mat-option>
+              <mat-option value="3">Tenis</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Menaxheri i fushes</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <mat-select formControlName="idManagingUser">
+              <mat-option value="1">Zgjimi</mat-option>
+              <mat-option value="2">Davidi</mat-option>
+              <mat-option value="3">Grande</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Shteti</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <mat-select formControlName="idState">
+              <mat-option value="1">Kosove</mat-option>
+              <mat-option value="2">Shqiperi</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+            >Qyteti</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <mat-select formControlName="idCity">
+              <mat-option value="1">Prishtine</mat-option>
+              <mat-option value="2">Peje</mat-option>
+              <mat-option value="3">Gjakove</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      [routerLink]="'/facilities'"
+      type="button"
+      mat-flat-button
+      color="warn"
+      mat-ripple-loader-class-name="mat-mdc-button-ripple"
+    >
+      Anulo
+    </button>
+    <button
+      (click)="saveUser()"
+      mat-flat-button
+      color="primary"
+      class="m-l-8"
+      mat-ripple-loader-class-name="mat-mdc-button-ripple"
+    >
+      Ruaj
+    </button>
+  </mat-card-actions>
+</mat-card>

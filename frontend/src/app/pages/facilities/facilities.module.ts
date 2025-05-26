@@ -11,7 +11,6 @@ import * as TablerIcons from 'angular-tabler-icons/icons';
 import { FacilitiesComponentsRoutes } from './facilities.routing';
 
 // ui components
-import { AppFacilitiesComponent } from './facilities.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
@@ -24,10 +23,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ReactiveFormsModule,
     TablerIconsModule.pick(TablerIcons),
     MatNativeDateModule,
-    MatPaginatorModule
+    MatPaginatorModule,
   ],
-  declarations: [
-    AppFacilitiesComponent
-  ],
+  declarations: [],
 })
 export class FacilitiescomponentsModule {}

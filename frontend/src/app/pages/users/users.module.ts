@@ -26,10 +26,6 @@ import { EditUserComponent } from './forms/edit-user/edit-user.component';
     TablerIconsModule.pick(TablerIcons),
     MatNativeDateModule,
   ],
-  declarations: [
-    AppUsersComponent,
-    CreateUserComponent,
-    EditUserComponent
-  ],
+  declarations: [AppUsersComponent, CreateUserComponent, EditUserComponent],
 })
 export class UserscomponentsModule {}
