@@ -13,6 +13,8 @@ import { AppReservationComponent } from './reservations.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ReservationComponentsRoutes } from './reservations.routing';
+import { MatCardModule } from '@angular/material/card';
+import { CreateReservationComponent } from './forms/create-reservation/create-reservation.component';
 
 @NgModule({
   imports: [
@@ -20,11 +22,12 @@ import { ReservationComponentsRoutes } from './reservations.routing';
     RouterModule.forChild(ReservationComponentsRoutes),
     MaterialModule,
     FormsModule,
+    MatCardModule,
     ReactiveFormsModule,
     TablerIconsModule.pick(TablerIcons),
     MatNativeDateModule,
     MatPaginatorModule,
   ],
-  declarations: [AppReservationComponent],
+  declarations: [AppReservationComponent, CreateReservationComponent],
 })
 export class ReservationComponentsModule {}
